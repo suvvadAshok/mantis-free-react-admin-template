@@ -1,15 +1,8 @@
-// project import
-import Routes from 'routes';
 import ThemeCustomization from 'themes';
-import ScrollTop from 'components/ScrollTop';
-
-// ==============================|| APP - THEME, ROUTER, LOCAL  ||============================== //
-
+import Layout from 'layout/Layout';
 const App = () => (
   <ThemeCustomization>
-    <ScrollTop>
-      <Routes />
-    </ScrollTop>
+    <Layout />
   </ThemeCustomization>
 );
 
