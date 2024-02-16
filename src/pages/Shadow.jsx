@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 // material-ui
 import { useTheme } from '@mui/material/styles';
 import { Grid, Stack, Typography } from '@mui/material';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 
 // project import
 import MainCard from 'components/MainCard';
@@ -29,13 +31,15 @@ ShadowBox.propTypes = {
 
 function CustomShadowBox({ shadow, label, color, bgcolor }) {
   return (
-    <MainCard border={false} sx={{ bgcolor: bgcolor || 'inherit', boxShadow: shadow }}>
-      <Stack spacing={1} justifyContent="center" alignItems="center">
-        <Typography variant="subtitle1" color={color}>
-          {label}
-        </Typography>
-      </Stack>
-    </MainCard>
+    <>
+      <MainCard border={false} sx={{ bgcolor: bgcolor || 'inherit', boxShadow: shadow }}>
+        <Stack spacing={1} justifyContent="center" alignItems="center">
+          <Typography variant="subtitle1" color={color}>
+            {label}
+          </Typography>
+        </Stack>
+      </MainCard>
+    </>
   );
 }
 
@@ -53,6 +57,15 @@ const ComponentShadow = () => {
 
   return (
     <ComponentSkeleton>
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link underline="hover" color="inherit" href="/">
+          Home
+        </Link>
+        <Typography color="text.primary">Shadow</Typography>
+      </Breadcrumbs>
+      <Typography variant="h1" sx={{ fontWeight: '700', fontSize: '18px', my: '20px' }}>
+        Shadow
+      </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <MainCard title="Basic Shadow" codeHighlight>
