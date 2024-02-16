@@ -14,7 +14,9 @@ const SamplePage = () => (
       <Link underline="hover" color="inherit" href="/">
         Home
       </Link>
-      <Typography color="text.primary">Sample Page</Typography>
+      <Typography color="text.primary" sx={{ fontWeight: '600' }}>
+        Sample Page
+      </Typography>
     </Breadcrumbs>
     <Typography variant="h1" sx={{ fontWeight: '700', fontSize: '18px', my: '20px' }}>
       Sample Page
