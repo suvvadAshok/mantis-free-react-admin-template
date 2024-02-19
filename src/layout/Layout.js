@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import { Box, useMediaQuery } from '@mui/material';
 import Drawer from '../components/Drawer';
 import Header from '../components/Header/index';
+import TypographyPage from 'components/pages/TypographyPage';
 const Layout = () => {
   const theme = useTheme();
   const matchDownLG = useMediaQuery(theme.breakpoints.down('lg'));
@@ -19,7 +20,8 @@ const Layout = () => {
       <Header open={open} handleDrawerToggle={handleDrawerToggle} />
       <Drawer open={open} handleDrawerToggle={handleDrawerToggle} />
       <Box component="main" sx={{ width: '100%', flexGrow: 1, p: { xs: 2, sm: 3 } }}>
-        {/* add here branch page  example:--->> <Dashboardpage /> */}
+      <TypographyPage />
+        
       </Box>
     </Box>
   );
